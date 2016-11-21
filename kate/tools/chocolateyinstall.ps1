@@ -1,7 +1,8 @@
-$url32       = "http://download.kde.org/stable/kate/Kate-setup-16.08.2-KF5.27-32bit.exe"
-$url64       = "http://download.kde.org/stable/kate/Kate-setup-16.08.2-KF5.27-64bit.exe"
-$checksum32  = "1dfbc3bed44642ec22e422fcfe13201651ad11839fbd1616beba3cb5015531b8"
-$checksum64  = "553c67ac8a63fd402ee63bbe54094716894232bd65af6c293dc4808b75110d97"
+$version = "16.08.3-KF5.28"
+$url32       = "http://download.kde.org/stable/kate/Kate-setup-$version-32bit.exe"
+$url64       = "http://download.kde.org/stable/kate/Kate-setup-$version-64bit.exe"
+$checksum32  = "aacc2092cd9ca25d7e27821ae978de7fde28c7007047c9ef58544c3f96ae8877"
+$checksum64  = "8c4ecce0d251a1692382af1c9373b213e506e7255c01c1e75cd47645c6e0e09b"
 
 $installArgs  = "/S"
 
