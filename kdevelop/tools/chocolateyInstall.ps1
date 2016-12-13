@@ -1,7 +1,8 @@
-$url32       = "http://download.kde.org/stable/kdevelop/5.0.2/bin/windows/kdevelop-5.0.2-x86-setup.exe"
-$url64       = "http://download.kde.org/stable/kdevelop/5.0.2/bin/windows/kdevelop-5.0.2-x64-setup.exe"
-$checksum32  = "b17bef8d76fca5ffce7a2fe2d8e7417de824fee051d8c06296b249d06b614a8f"
-$checksum64  = "11d0ea458916c7231734c7703836ae7ce0ad6b31ded0bf943d81dda93aff9d8e"
+$ver         = "5.0.3"
+$url32       = "http://download.kde.org/stable/kdevelop/{0}/bin/windows/kdevelop-{0}-x86-setup.exe" -f $ver
+$url64       = "http://download.kde.org/stable/kdevelop/{0}/bin/windows/kdevelop-{0}-x64-setup.exe" -f $ver
+$checksum32  = "2c0ed9efc60ae336b93dab46cef4c47e7bbda59e05c1aecc982a7d1ee6c776c1"
+$checksum64  = "ccbfab5e43f9ee236bd5c90a6021d17c54b76d7e0fc683eb83126f36b2cf555f"
 
 
 $ErrorActionPreference = 'Stop';
@@ -11,7 +12,7 @@ $ErrorActionPreference = 'Stop';
 [float]::TryParse(("{0}.{1}{2}" -f $Matches.Major, $Matches.Minor, $Matches.Build), [ref]$winVer ) | Out-Null
 if ($winVer -le 10.0)
 {
-    # Windows versions previous to Windows 10 require a prerequisite hotfix 
+    # Windows versions previous to Windows 10 require a prerequisite hotfix
     if (-not (Get-HotFix -Id KB2999226 -ErrorAction SilentlyContinue))
     {
         Write-Error "A prerequisite for installing Visual Studio 2015 applications is to have hotfix KB2999226 installed. See https://support.microsoft.com/en-us/kb/2999226 for more details"
