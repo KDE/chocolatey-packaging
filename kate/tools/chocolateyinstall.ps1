@@ -1,8 +1,8 @@
-$version = "17.04.1-KF5.34"
-$url32       = "https://download.kde.org/stable/kate/Kate-setup-$version-32bit.exe"
-$url64       = "https://download.kde.org/stable/kate/Kate-setup-$version-64bit.exe"
-$checksum32  = "a17cb888a608c1284a3b375202eadddc1cd65916866902966b961f4832510d31"
-$checksum64  = "b5d6fd9c0653aea2bb453ed48f1e6a3f44824b1cc9326a8e6e0cd836d3e05cf2"
+$version = "17.04.3-KF5.36"
+$url32       = "http://download.kde.org/stable/kate/Kate-setup-$version-32bit.exe"
+$url64       = "http://download.kde.org/stable/kate/Kate-setup-$version-64bit.exe"
+$checksum32  = "d2213214eaa2bb8466036415019b2be24dc593edcb5c289491f5175268d2dd64"
+$checksum64  = "8f1d596d9c2611c2f25ea2d909fd482d5c14e8506e42603c289b07910dbaeab3"
 
 $installArgs  = "/S"
 
