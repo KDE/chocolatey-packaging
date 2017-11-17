@@ -1,8 +1,8 @@
-$ver         = "5.1.2"
+$ver         = "5.2.0"
 $url32       = "https://download.kde.org/stable/kdevelop/{0}/bin/windows/kdevelop-{0}-x86-setup.exe" -f $ver
 $url64       = "https://download.kde.org/stable/kdevelop/{0}/bin/windows/kdevelop-{0}-x64-setup.exe" -f $ver
-$checksum32  = "54d071a30fe581355032d758b4d9a6c48ce793db5fed35a357d686d72881c5f2"
-$checksum64  = "22d5d86afc603f02cc43b652cb82739a6600636476df2b7318e5fa45d504164b"
+$checksum32  = "0757a484c2c65ba7b5d2c1c43ea1beb5b96d24883ed95bb408f23e158bd00ae2"
+$checksum64  = "0e8a860c8cdc4010d71ccf2f1d3762136b23dbb1f08a69b4a2151cb1eb4ae72e"
 
 
 $ErrorActionPreference = 'Stop';
