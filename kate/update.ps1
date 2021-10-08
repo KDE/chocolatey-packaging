@@ -13,7 +13,7 @@ function global:au_GetLatest {
         URL64        = 'https://binary-factory.kde.org/view/Windows%2064-bit/job/Kate_Release_win64/' + $build64 + '/artifact/kate-' + $version + '-' + $build64 + '-windows-msvc2019_64-cl.exe'
         Version      = $version
         Copying      = 'https://invent.kde.org/utilities/kate/-/raw/v' + $version +'/LICENSES/LGPL-2.0-or-later.txt'
-        ReleaseNotes = 'https://www.kde.org/announcements/fulllog_applications.php?version=' + $version + '#kate'
+        ReleaseNotes = 'https://kde.org/announcements/changelogs/gear/' + $version + '/#kate'
     }
 }
 
