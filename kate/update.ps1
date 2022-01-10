@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/KDE/kate/releases'
+$releases = 'https://github.com/KDE/kate/tags'
 $artifacts64 = 'https://binary-factory.kde.org/view/Windows%2064-bit/job/Kate_Release_win64/lastSuccessfulBuild/artifact/'
 
 function global:au_GetLatest {  
