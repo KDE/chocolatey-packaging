@@ -3,7 +3,7 @@
   <metadata>
     <id>kate</id>
     <title>Kate</title>
-    <version>22.08.1</version>
+    <version>22.12.1</version>
     <summary>A multi-document, multi-view text editor by KDE.</summary>
     <description>
 Kate is a programmer's text editor by KDE. It features stuff like codefolding, syntaxhighlighting, dynamic word wrap, an embedded console, an extensive plugin interface and some prelimentary scripting support. But Kate is more than a programmer's editor. Its ability to open several files at once makes it ideal for editing many configuration files.
@@ -39,9 +39,9 @@ This package does *not* support *32-bit* architecture.
     <tags>admin foss cross-platform text editor kate kde5 kde qt qt5 notepad kwrite</tags>
     <projectUrl>https://kate-editor.org/</projectUrl>
     <projectSourceUrl>https://invent.kde.org/utilities/kate</projectSourceUrl>
-    <licenseUrl>https://invent.kde.org/utilities/kate/-/raw/v22.08.1/LICENSES/LGPL-2.0-or-later.txt</licenseUrl>
+    <licenseUrl>https://invent.kde.org/utilities/kate/-/raw/v22.12.1/LICENSES/LGPL-2.0-or-later.txt</licenseUrl>
     <packageSourceUrl>https://invent.kde.org/packaging/chocolatey-packaging/-/tree/master/kate</packageSourceUrl>
-    <releaseNotes>https://kde.org/announcements/changelogs/gear/22.08.1/#kate</releaseNotes>
+    <releaseNotes>https://kde.org/announcements/changelogs/gear/22.12.1/#kate</releaseNotes>
     <dependencies>
         <dependency id="vcredist140" version="14.0" />
     </dependencies>
