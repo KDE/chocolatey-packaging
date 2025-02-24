@@ -1,16 +1,17 @@
 import-module au
 
-$releases = 'https://github.com/KDE/kate/tags'
-$artifacts64 = 'https://binary-factory.kde.org/view/Windows%2064-bit/job/Kate_Release_win64/lastSuccessfulBuild/artifact/'
+$releases = 'https://cdn.kde.org/ci-builds/utilities/kate/'
 
 function global:au_GetLatest {  
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $url           = $download_page.links | ? href -match '.zip$' | select -First 1 -expand href
-  $version       = ($url -split '/|.zip' | select -Last 1 -Skip 1).Replace('v','')
-  $build64 = ((Invoke-WebRequest $artifacts64 -UseBasicParsing).links | ? href -match $version | select -First 1 -expand href) -split '-' | select -First 1 -Skip 2
+  $version       = $download_page.links | ? href -match 'release' | select -Last 1 -expand href
+  $version       = ($version -split '-' | select -Last 1).Replace('/','')
+
+  $artifacts64 = 'https://cdn.kde.org/ci-builds/utilities/kate/release-' + $version + '/windows/'
+  $build64 = ((Invoke-WebRequest $artifacts64 -UseBasicParsing).links | ? href -match '.exe$' | select -First 1 -expand href) -split '-' | select -First 3
 
     @{
-        URL64        = 'https://binary-factory.kde.org/view/Windows%2064-bit/job/Kate_Release_win64/' + $build64 + '/artifact/kate-' + $version + '-' + $build64 + '-windows-cl-msvc2019-x86_64.exe'
+        URL64        = 'https://cdn.kde.org/ci-builds/utilities/kate/release-' + $version + '/windows/kate-release_' + $version + '-' + $build64[2] + '-windows-cl-msvc2022-x86_64.exe'
         Version      = $version
         Copying      = 'https://invent.kde.org/utilities/kate/-/raw/v' + $version +'/LICENSES/LGPL-2.0-or-later.txt'
         ReleaseNotes = 'https://kde.org/announcements/changelogs/gear/' + $version + '/#kate'
@@ -18,7 +19,7 @@ function global:au_GetLatest {
 }
 
 function global:au_BeforeUpdate {
-        Invoke-WebRequest -Uri $Latest.Copying -OutFile "legal\LICENSE.txt"
+        #Invoke-WebRequest -Uri $Latest.Copying -OutFile "legal\LICENSE.txt"
         Get-RemoteFiles -Purge -NoSuffix
 }
 
