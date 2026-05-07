@@ -6,13 +6,13 @@ The installer have been downloaded from the Binary Factory for KDE and can be ve
 
 1. Download the following builds.
  
-x86_64: https://binary-factory.kde.org/view/Windows%2064-bit/job/Kate_Release_win64/2145/artifact/kate-23.08.0-2145-windows-cl-msvc2019-x86_64.exe
+x86_64: https://cdn.kde.org/ci-builds/utilities/kate/release-26.04/windows/kate-release_26.04-11597-windows-cl-msvc2022-x86_64.exe
 
 2. You can use one of the following methods to obtain the checksum(s):
   - use powershell function 'Get-Filehash',
   - use chocolatey utility 'checksum.exe'.
 
   checksum type: sha256
-  checksum64: 2D0BFC236C8A5FBA89EEBE2FA337A1289CE8E2A1F7E4615EBB57A0491673603A
+  checksum64: A1C7C874C13732C6FFE415399E6EF0FB5112856DDF0409F4059CA6F7F13BBB9B
 
-The included 'LICENSE.txt' file have been obtained from: https://invent.kde.org/utilities/kate/-/raw/v23.08.0/LICENSES/LGPL-2.0-or-later.txt
+The included 'LICENSE.txt' file have been obtained from: https://invent.kde.org/utilities/kate/-/raw/v26.04/LICENSES/LGPL-2.0-or-later.txt
